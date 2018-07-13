@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
-  padding: 0.3vh 0;
+  padding: 0.25vh 0;
   text-align: right;
   background-color: rgba(0, 0, 0, 0.4);
   margin: none;
@@ -20,10 +20,10 @@ const Underline = styled.div`
 `
 
 const Linked = styled(Link)`
-  font-size: calc(6px + 0.4vw);
+  font-size: calc(5px + 0.4vw);
   color: white;
-  padding: 20px 0;
-  white-space: nowrap;
+  padding: 2vh 0;
+  /* white-space: nowrap; */
   font-family: Helvetica, Arial;
   text-decoration: none;
   position: relative;
@@ -38,12 +38,10 @@ const Div = styled.div`
   margin: none;
   text-align: center;
   display: inline-block;
-  width: 4%;
-  padding: 20px 2.5%;
+  width: 9%;
+  padding: 15px 0;
   transition: 0.5s ease;
-  /* border: 1px solid yellow; */
-
-
+  border-left: 1px solid rgba(255,255,255,0.09);
 
   &#one:hover ~ ${Underline} {
     left: 55vw;
@@ -101,7 +99,7 @@ export default class Header extends Component {
         </Div>
 
         <Div id='four'>
-          <Linked to="/Blog">BLOG</Linked>
+          <Linked to="/ShowerThoughts">SHOWER THOUGHTS</Linked>
         </Div>
 
         <Div id='five'>

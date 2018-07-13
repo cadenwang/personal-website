@@ -1,21 +1,18 @@
 import React from 'react';
 import { Fullpage, Slide, HorizontalSlider } from 'fullpage-react';
 import Home from './Home.jsx';
-import Header from './Header.jsx';
 import AboutMe from './AboutMe.jsx';
 import Resume from './Resume.jsx';
-import Blog from './Blog.jsx';
+import ShowerThoughts from './ShowerThoughts.jsx';
 import Contact from './Contact.jsx';
 
-const HeaderStyle = {
-  textAlign: 'center',
-  position: 'fixed',
-  width: '100%',
-  cursor: 'pointer',
-  zIndex: 10,
-  backgroundColor: 'rgba(255, 255, 255, 0.4)',
-  top: '0px'
-};
+<Switch>
+  <Route exact path="/" component={Home} />
+  <Route exact path="/AboutMe" component={AboutMe} />
+  <Route exact path="/Resume" component={Resume} />
+  <Route exact path="/ShowerThoughts" component={ShowerThoughts} />
+  <Route exact path="/Contact" component={Contact} />
+</Switch>
 
 const fullPageOptions = {
   scrollSensitivity: 7,
@@ -53,7 +50,7 @@ const slides = [
   <HorizontalSlider {...horizontalSliderProps}></HorizontalSlider>,
 
   <Slide style={{backgroundColor: '#92fcde'}}>
-    <Blog />
+    <ShowerThoughts />
   </Slide>,
 
   <Slide style={{backgroundColor: '#debcff'}}>

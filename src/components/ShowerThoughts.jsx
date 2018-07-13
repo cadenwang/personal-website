@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const BlogContainer = styled.div`
+const ShowerThoughtsContainer = styled.div`
   background-color: #92fcde;
   text-align: center;
   padding: 275px 0 275px 0;
@@ -14,18 +14,18 @@ const Text = styled.div`
   text-align: center;
 `
 
-export default class Blog extends Component {
+export default class ShowerThoughts extends Component {
   constructor(props) {
     super(props);
     this.state = {  }
   }
   render() { 
     return ( 
-      <BlogContainer>
+      <ShowerThoughtsContainer>
         <Text>
-        Blog.
+        ShowerThoughts.
         </Text>
-      </BlogContainer>
+      </ShowerThoughtsContainer>
     );
   }
 }
