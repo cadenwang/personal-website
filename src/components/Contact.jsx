@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const BlogContainer = styled.div`
+const ContactContainer = styled.div`
   background-color: #debcff;
   text-align: center;
   padding: 275px 0 275px 0;
@@ -21,11 +21,11 @@ export default class Contact extends Component {
   }
   render() { 
     return (  
-      <BlogContainer>
+      <ContactContainer>
         <Text>
         Contact.
         </Text>
-      </BlogContainer>
+      </ContactContainer>
     );
   }
 }
