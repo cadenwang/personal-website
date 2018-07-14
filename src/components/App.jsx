@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Header.jsx';
 import { Fullpage, fullPageOptions } from './Fullpage.jsx';
+import styled from 'styled-components';
+import FullpageReact from './FullpageReact.jsx';
+
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+
+    }
+  }
   render() {
     return (
       <div>
-      <Router>
-      <div>
-        <Fullpage {...fullPageOptions}>
-          <Header />
-        </Fullpage> 
-      </div>
-      </Router>
+        <FullpageReact/>
       </div>
     );
   }

@@ -14,35 +14,31 @@ const Container = styled.div`
 
 const Underline = styled.div`
     background: rgba(100,100,200,0);
-    top: 96%;
+    top: 96.5%;
     position: absolute;
     transition: 0.5s ease;
 `
 
-const Linked = styled(Link)`
-  font-size: calc(5px + 0.4vw);
-  color: white;
-  padding: 2vh 0;
-  /* white-space: nowrap; */
-  font-family: Helvetica, Arial;
-  text-decoration: none;
+const Button = styled.button`
+  display: inline-block;
   position: relative;
+  border: none;
+  background: none;
+  margin: none;
+  font-family: Helvetica, Arial;
+  text-align: center;
+  width: 9%;
+  border-left: 1px solid rgba(255,255,255,0.09);
+  font-size: calc(5px + 0.4vw);
+  outline: none;
+  color: white;
+  padding: 1.5vh 0;
+  /* white-space: nowrap; */
+  text-decoration: none;
   transition: 0.5s ease;
   &:hover {
     text-shadow: 0px -1px 0px rgba(255,255,255,0.5), 0 0 5px rgba(255,255,255,0.8),0 -1px 1px rgba(255,255,255,0.5);
   }
-`
-
-const Div = styled.div`
-  position: relative;
-  margin: none;
-  text-align: center;
-  display: inline-block;
-  width: 9%;
-  padding: 15px 0;
-  transition: 0.5s ease;
-  border-left: 1px solid rgba(255,255,255,0.09);
-
   &#one:hover ~ ${Underline} {
     left: 55vw;
     width: 9vw;
@@ -80,31 +76,15 @@ const Div = styled.div`
   }
 `
 
-
-
 export default class Header extends Component {
   render() {
     return (
       <Container>
-        <Div id='one'>
-          <Linked to="/">HOME</Linked>
-        </Div>
-
-        <Div id='two'>
-          <Linked to="/AboutMe">ABOUT ME</Linked>
-        </Div>
-
-        <Div id='three'>
-          <Linked to="/Resume">RESUME</Linked>
-        </Div>
-
-        <Div id='four'>
-          <Linked to="/ShowerThoughts">SHOWER THOUGHTS</Linked>
-        </Div>
-
-        <Div id='five'>
-          <Linked to="/Contact">CONTACT</Linked>
-        </Div>
+          <Button id='one' onClick={(e) => this.props.changeFullpageSlide(0)}>HOME</Button>
+          <Button id='two' onClick={(e) => this.props.changeFullpageSlide(1)}>ABOUT ME</Button>
+          <Button id='three' onClick={(e) => this.props.changeFullpageSlide(2)}>RESUME</Button>
+          <Button id='four' onClick={(e) => this.props.changeFullpageSlide(3)}>SHOWER THOUGHTS</Button>
+          <Button id='five' onClick={(e) => this.props.changeFullpageSlide(4)}>CONTACT</Button>
         <Underline></Underline>
       </Container>
     );
